@@ -23,7 +23,7 @@ export default function Menu() {
                 <DropdownMenuContent className="bg-gradient-aah border-[6px]">
                     <button className="flex items-center">
                     <Avatar>
-                        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn"/>
+                        <AvatarImage src="fr.jpg" alt="@shadcn"/>
                         <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                     <DropdownMenuLabel className="text-[2rem]">Flash reverso</DropdownMenuLabel>
