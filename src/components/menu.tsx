@@ -18,9 +18,9 @@ export default function Menu() {
         <div>
             <DropdownMenu>
                 <DropdownMenuTrigger>
-                        <i className="fa-solid fa-bars text-black text-[2.5rem] hover:text-red-500 cursor-pointer"></i>
+                        <i className="fa-solid fa-bars text-black text-[2.5rem] hover:text-red-500 cursor-pointer dark:text-DarkTextColor"></i>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-gradient-aah border-[6px]">
+                <DropdownMenuContent className="bg-gradient-to-t from-cianinho to-rosinha border-[6px] dark:from-DarkMenuColor dark:to-DarkMenuColor">
                     <button className="flex items-center">
                     <Avatar>
                         <AvatarImage src="fr.jpg" alt="@shadcn"/>

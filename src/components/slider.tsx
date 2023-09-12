@@ -39,7 +39,7 @@ export default function Slider(){
             ['/cone_banana.png', 'Cone de Banana'],
           ].map(([url, text], index) => (
             <SwiperSlide key={index}>
-              <section className="w-full h-[500px] flex flex-col items-center justify-around gap-4 drop-shadow-3xl bg-gradient-aah rounded-2xl select-none cursor-grab">
+              <section className="w-full h-[500px] flex flex-col items-center justify-around gap-4 drop-shadow-3xl bg-gradient-to-t from-cianinho to-rosinha rounded-2xl select-none cursor-grab dark:from-DarkMenuColor dark:to-DarkMenuColor">
                   <Image src={url} width={200} height={200} alt={text} className='w-[200px] h-[200px] sm:w-[290px] sm:h-[290px] rounded-[40%] border-4 border-black'/>
                   <p className="text-center text-2xl xs:text-3xl tracking-tighter">
                     {text}

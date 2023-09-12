@@ -22,6 +22,11 @@ module.exports = {
     },
     extend: {
       colors: {
+        'DarkBgColor': '#191726',
+        'DarkMenuColor': '#383a50',
+        'DarkTextColor': '#eeeeee',
+        'rosinha': '#ffc2cc',
+        'cianinho': '#add8e6',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

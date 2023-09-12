@@ -67,7 +67,6 @@
 }
 
 body{
-  background: linear-gradient(to bottom, #add8e6, hsl(350, 100%, 88%));
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
