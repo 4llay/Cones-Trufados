@@ -23,7 +23,7 @@ export function Header() {
                         {/* Logo */}
                         <img className="hidden md:flex w-[70px] pr-[-15px]" src="/logo pro.png" />
                         {/* Titulo */}
-                        <h1 className='text-[1.6em] xs:text-[2em] sm:text-[3em] md:text-[2em] lg:text-[3em] xl:text-[4rem] dark:text-DarkTextColor'>Cones Trufadassos</h1>
+                        <a href='/'><h1 className='text-[1.6em] xs:text-[2em] sm:text-[3em] md:text-[2em] lg:text-[3em] xl:text-[4rem] dark:text-DarkTextColor'>Cones Trufadassos</h1></a>
                     </div>
 
                     {<nav>

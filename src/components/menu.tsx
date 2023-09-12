@@ -29,7 +29,7 @@ export default function Menu() {
                     <DropdownMenuLabel className="text-[2rem]">Flash reverso</DropdownMenuLabel>
                     </button>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem className="text-[2rem]">Configurações</DropdownMenuItem>
+                    <DropdownMenuItem className="text-[2rem]"><a href="/config">Configurações</a></DropdownMenuItem>
                     <DropdownMenuItem className="text-[2rem]">Historico de compra</DropdownMenuItem>
                     <DropdownMenuItem className="text-[2rem]">Carrinho</DropdownMenuItem>
                     <DropdownMenuSeparator />
