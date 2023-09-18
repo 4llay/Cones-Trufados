@@ -1,13 +1,19 @@
-"use client"
-
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
 import Slider from '@/components/slider'
+import { getCurrentUser } from '@/lib/session'
 
-export default function Home() {
+export default async function Home() {
+  const user = await getCurrentUser();
   return (
-    <main className='flex items-center justify-center'>
-      <section className='w-full max-w-46xl flex items-center justify-center py-[70px]'>
-        <Slider />
-      </section>
-    </main>
+    <>
+      <Header />
+      <main className='flex items-center justify-center'>
+        <section className='w-full max-w-46xl flex items-center justify-center py-[70px]'>
+          <Slider />
+        </section>
+      </main>
+      <Footer />
+    </>
   )
 }

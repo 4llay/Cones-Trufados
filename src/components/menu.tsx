@@ -13,7 +13,17 @@ import {
     AvatarImage,
 } from "@/components/ui/avatar"
 
-export default function Menu() {
+import { getCurrentUser } from "@/lib/session"
+import AuthButton from "@/components/exit-button"
+
+import { SessionProvider, signOut, useSession } from "next-auth/react"
+import { Button } from "./ui/button";
+import { Link } from "lucide-react";
+
+export default async function Menu() {
+
+    const user = await getCurrentUser();
+
     return (
         <div>
             <DropdownMenu>
@@ -33,7 +43,9 @@ export default function Menu() {
                     <DropdownMenuItem className="text-[2rem]">Historico de compra</DropdownMenuItem>
                     <DropdownMenuItem className="text-[2rem]">Carrinho</DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem className="text-[2rem]">Fazer Login</DropdownMenuItem>
+                    <DropdownMenuItem className="text-[2rem]">
+                        <AuthButton page="login"/>
+                    </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>
         </div>

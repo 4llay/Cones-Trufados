@@ -1,9 +1,9 @@
-import { Footer } from '@/components/footer'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Playfair_Display } from 'next/font/google'
-import { Header } from '@/components/header'
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
+import AuthProvider from '@/components/ui/auth-provider'
 
 const playfair = Playfair_Display({ subsets: ['latin'] })
 
@@ -25,9 +25,10 @@ export default function RootLayout({
       </head>
       <body className='bg-gradient-to-b from-cianinho to-rosinha dark:from-DarkBgColor dark:to-DarkBgColor'>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
+          <Toaster />
+          <AuthProvider>
           {children}
-          <Footer />
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
