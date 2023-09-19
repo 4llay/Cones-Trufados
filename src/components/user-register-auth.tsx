@@ -5,7 +5,6 @@ import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Icons } from "@/components/icons";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
 import { useRouter } from "next/navigation"
@@ -130,9 +129,6 @@ export function UserRegisterForm({ className, ...props }: UserAuthFormProps){
                     />
                 </div>
                 <Button disabled={isLoading}>
-                {isLoading && (
-                    <Icons.spinner className="mr-2 h-4 w-4 animate-spin"/>
-                )}
                 Registrar-se
                 </Button>
             </div>

@@ -5,7 +5,6 @@ import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Icons } from "@/components/icons";
 import { signIn } from "next-auth/react";
 import { useToast } from "@/components/ui/use-toast";
 import { ToastAction } from "@/components/ui/toast";
@@ -108,10 +107,7 @@ export function UserLoginForm({
                     />
                 </div>
                 <Button disabled={isLoading}>
-                {isLoading && (
-                    <Icons.spinner className="mr-2 h-4 w-4 animate-spin"/>
-                )}
-                Entrara
+                Entrar
                 </Button>
             </div>
         </form>

@@ -10,11 +10,11 @@ export default function AuthButton({ page }: { page: string }) {
   return (
     <>
       {!isAuthenticated ? (
-        <Link href={"/login"}>
+        <Link href={"/login"} className="w-full">
           Entrar
         </Link>
       ) : (
-        <button onClick={() => signOut({ callbackUrl: "/login" })}>
+        <button onClick={() => signOut({ callbackUrl: "/login" })} className="w-full text-start">
           Sair
         </button>
       )}
