@@ -111,7 +111,7 @@ export function UserLoginForm({
                 {isLoading && (
                     <Icons.spinner className="mr-2 h-4 w-4 animate-spin"/>
                 )}
-                Entrar
+                Entrara
                 </Button>
             </div>
         </form>
