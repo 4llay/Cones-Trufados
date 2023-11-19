@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { Footer } from "@/components/footer"
 import { useTheme } from "next-themes"

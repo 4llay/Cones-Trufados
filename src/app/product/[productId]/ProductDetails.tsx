@@ -6,10 +6,7 @@ import { useCart } from "../../../../hooks/useCart";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import ProductImage from "@/components/products/ProductImage";
-import { Footer } from "@/components/footer";
-import Menu from "@/components/menu";
 import { toast } from "@/components/ui/use-toast";
-import { Header } from "@/components/header";
 
 interface ProductDetailsProps {
     product: any
@@ -66,7 +63,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                     <div className="flex items-center gap-2"></div>
                     <Horizontal />
                     <div className="text-justify">{product.description}</div>
-                    <div className={product.inStock ? 'text-teal-400' : "text-rose-400"}>{product.inStock ? "Em estoque!" : "Fora de estoque!"}</div>
+                    <div className={`${product.inStock ? 'text-green-500' : "text-rose-400"}`}>{product.inStock ? "Em estoque!" : "Fora de estoque!"}</div>
                     {isProductInCart ? <>
                         <Horizontal />
                         <p className="mb-2 flex items-center gap-1">

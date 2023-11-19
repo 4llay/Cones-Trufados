@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import Slider from '@/components/slider'

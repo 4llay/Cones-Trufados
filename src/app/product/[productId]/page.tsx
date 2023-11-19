@@ -12,6 +12,8 @@ const Product = ({ params }: { params: IPrams }) => {
     
     const product = products.find((item)=> item.id === params.productId)
 
+    console.log(product)
+
     return (
         <div className="p-8">
             <Header />
