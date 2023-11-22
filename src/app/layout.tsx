@@ -25,7 +25,7 @@ export default async function RootLayout({
         <script src="https://kit.fontawesome.com/cd773e3565.js"></script>
         <link rel="icon" type="image/x-icon" href="/logo pro.png"></link>
       </head>
-      <body className='bg-gradient-to-b from-cianinho to-rosinha dark:from-DarkBgColor dark:to-DarkBgColor'>
+      <body className='bg-gradient-to-b from-cianinho to-rosinha dark:from-DarkBgColor dark:to-DarkBgColor text-black dark:text-white'>
           <CartProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <Toaster />

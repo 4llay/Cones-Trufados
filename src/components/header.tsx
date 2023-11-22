@@ -4,6 +4,7 @@ import { Courgette } from 'next/font/google'
 import { ThemeButton } from '@/components/theme-button';
 import dynamic from 'next/dynamic';
 import { getCurrentUser } from '../../actions/getCurrentUser';
+const bcrypt = require('bcrypt');
 
 const courgette = Courgette({
     subsets: ['latin'],

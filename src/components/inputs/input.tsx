@@ -29,7 +29,8 @@ const Input: React.FC<InputProps> = ({
         p-4 
         pt-6 
         outline-none 
-        bg-white 
+        bg-white
+        text-black
         font-light 
         border-2 
         rounded-md 

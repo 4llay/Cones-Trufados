@@ -18,7 +18,7 @@ const Home = async ({ params }: { params: IPrams }) => {
       <Header />
       <main className='flex items-center justify-center'>
         <section className='w-full max-w-46xl flex items-center justify-center py-[70px]'>
-            <Slider />
+          <Slider />
         </section>
       </main>
       <Footer />

@@ -1,6 +1,7 @@
 'use client'
 
 import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
 import { useTheme } from "next-themes"
 
 export default function Config() {
