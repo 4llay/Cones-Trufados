@@ -36,6 +36,27 @@ export default function Sobre() {
                                 4) Propor recomendações específicas para melhorar a presença online e o desempenho de uma loja de cones trufados na web.<br /><br />
                             </AccordionContent>
                         </AccordionItem>
+                        <AccordionItem value="item-4">
+                            <AccordionTrigger className="text-xl sm:text-2xl font-extrabold">
+                                Duvidas Frequentes...
+                            </AccordionTrigger>
+                            <AccordionContent className="text-xl font-semibold">
+                                <Accordion type="single" collapsible className="w-[full] pl-2">
+                                    <AccordionItem value="item-5">
+                                        <AccordionTrigger>Como fazer para comprar um cone?</AccordionTrigger>
+                                        <AccordionContent>Para realizar a compra do cone trufado basta selecionar uma das 6 opções disponiveis, adicionar ao carrinho, e clicar no botão pagamento.</AccordionContent>
+                                    </AccordionItem>
+                                    <AccordionItem value="item-6">
+                                        <AccordionTrigger>Como posso receber meu pedido?</AccordionTrigger>
+                                        <AccordionContent>No processo da compra, basta informar sua localização e se ela estiver disponivel em nossos alcances a entrega sera feita por um de nossos funcionarios.</AccordionContent>
+                                    </AccordionItem>
+                                    <AccordionItem value="item-7">
+                                        <AccordionTrigger>Tenho alguma duvida, com quem posso falar?</AccordionTrigger>
+                                        <AccordionContent>Basta clicar no botão de contato, voce sera redirecionado para nosso instagram e la voce podera tirar suas duvidas conosco diretamente.</AccordionContent>
+                                    </AccordionItem>
+                                </Accordion>
+                            </AccordionContent>
+                        </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger className="text-xl sm:text-2xl font-extrabold">
                                 A nossa equipe...
@@ -47,27 +68,6 @@ export default function Sobre() {
                                 <div className="bg-gray-200 p-2 rounded-xl h-fit pt-6 mb-6 font-semibold dark:bg-DarkMenuColor"><span className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Caique Esteves de Jesus</span> <br /> Designer<br /><br /> </div>
                                 <div className="bg-gray-200 p-2 rounded-xl h-fit pt-6 mb-6 font-semibold dark:bg-DarkMenuColor"><span className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Lucas Alves Pereira</span> <br /> Beta Tester<br /><br /> </div>
                                 <div className="bg-gray-200 p-2 rounded-xl h-fit pt-6 mb-6 font-semibold dark:bg-DarkMenuColor"><span className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Fernando Alves Pereira</span> <br /> Beta Tester </div>
-                            </AccordionContent>
-                        </AccordionItem>
-                        <AccordionItem value="item-4">
-                            <AccordionTrigger className="text-xl sm:text-2xl font-extrabold">
-                                Duvidas Frequentes...
-                            </AccordionTrigger>
-                            <AccordionContent className="text-xl font-semibold">
-                                <Accordion type="single" collapsible className="w-[full] pl-2">
-                                    <AccordionItem value="item-5">
-                                        <AccordionTrigger>Pergunta 1</AccordionTrigger>
-                                        <AccordionContent>Resposta da primeira pergunta</AccordionContent>
-                                    </AccordionItem>
-                                    <AccordionItem value="item-6">
-                                        <AccordionTrigger>Pergunta 2</AccordionTrigger>
-                                        <AccordionContent>Resposta da segunda pergunta</AccordionContent>
-                                    </AccordionItem>
-                                    <AccordionItem value="item-7">
-                                        <AccordionTrigger>Pergunta 3</AccordionTrigger>
-                                        <AccordionContent>Resposta da terceira pergunta</AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>

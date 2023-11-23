@@ -5,17 +5,18 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 const Checkout = () => {
-    return ( 
-    <div className="p-8">
-        <Header />
-        <Container>
-            <FormWrap>
-                <CheckoutClient />
-            </FormWrap>
-        </Container>
-        <Footer />
-    </div> 
+    console.log('a')
+    return (
+        <div className="p-8">
+            <Header />
+            <Container>
+                <FormWrap>
+                    <CheckoutClient />
+                </FormWrap>
+            </Container>
+            <Footer />
+        </div>
     );
 }
- 
+
 export default Checkout;
