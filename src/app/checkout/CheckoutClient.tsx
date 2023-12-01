@@ -69,28 +69,26 @@ const CheckoutClient = () => {
 
     return (
         <div className="w-full">
-                    <form id="payment-form">
-                        <div className="mb-6">
-                            <Heading title="Digite suas informações para continuar" />
-                        </div>
-                        <h2 className="font-semibold mt-4 mb-2">Digite suas informações</h2>
-                        <Label  htmlFor="Nome">Nome do destinatario</Label>
-                        <Input placeholder="jugemu jugemu" required/>
-                        <Label htmlFor="Nome">Endereço</Label>
-                        <Input placeholder="Comi o cu de quem ta lendo" required/>
-                        <br/>
-                        <h2 className="font-semibold mt-4 mb-2">Informações de pagamento</h2>
-                        <Label htmlFor="Numero do Cartão De Credito">Numero do cartão de credito</Label>
-                        <Input placeholder="**** **** **** ****" type="password" required/>
-                        <Label htmlFor="Data de vencimento">Data de vencimento</Label>
-                        <Input placeholder="MM / YY" required/>
-                        <Label htmlFor="Codigo de segurança">Codigo de segurança</Label>
-                        <Input placeholder="CVC" required/>
-                        <div className="py-4 text-center text-slate-700 text-xl font-bold">
-                            Total: {formattedPrice}
-                        </div>
-                        <Button label={isLoading ? 'Processando' : 'Pague agora'} onClick={() => {router.push('/login')}} />
-                    </form>
+            <form id="payment-form">
+                <div className="mb-6 text-center text-[4dvh] font-bold">
+                    <h1>Escolha uma forma de pagamento</h1>
+                </div>
+                <div className="flex w-full justify-around text-[7dvh] mb-[50px]">
+                    <div className="text-center">
+                        <a href="/"><i className="fa-regular fa-credit-card"></i></a>
+                        <h1 className="text-[3dvh] font-bold">Cartão</h1>
+                    </div>
+                    <div className="text-center">
+                        <a href="/"><i className="fa-brands fa-pix"></i></a>
+                        <h1 className="text-[3dvh] font-bold">Pix</h1>
+                    </div>
+                    <div className="text-center">
+                        <a href="/"><i className="fa-solid fa-money-bills"></i></a>
+                        <h1 className="text-[3dvh] font-bold">Dinheiro</h1>
+                    </div>
+                </div>
+                <h2 className="font-semibold text-[2dvh] mt-4 mb-2 text-center">Escolha uma forma para realizar o pagamento do produto na hora do recebimento...</h2>
+            </form>
         </div>
     );
 }
