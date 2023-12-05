@@ -5,11 +5,7 @@ import { useCart } from "../../../hooks/useCart";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { StripeElementsOptions, loadStripe } from "@stripe/stripe-js"
-import Button from "@/components/Button";
-import Heading from "@/components/Heading";
 import { formatPrice } from "../../../utils/formatPrice";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string)
 
@@ -75,15 +71,15 @@ const CheckoutClient = () => {
                 </div>
                 <div className="flex w-full justify-around text-[7dvh] mb-[50px]">
                     <div className="text-center">
-                        <a href="/"><i className="fa-regular fa-credit-card"></i></a>
+                        <a href="/checkout/PaymentPage"><i className="fa-regular fa-credit-card"></i></a>
                         <h1 className="text-[3dvh] font-bold">Cartão</h1>
                     </div>
                     <div className="text-center">
-                        <a href="/"><i className="fa-brands fa-pix"></i></a>
+                        <a href="/checkout/PaymentPix"><i className="fa-brands fa-pix"></i></a>
                         <h1 className="text-[3dvh] font-bold">Pix</h1>
                     </div>
                     <div className="text-center">
-                        <a href="/"><i className="fa-solid fa-money-bills"></i></a>
+                        <a href="/checkout/Payment"><i className="fa-solid fa-money-bills"></i></a>
                         <h1 className="text-[3dvh] font-bold">Dinheiro</h1>
                     </div>
                 </div>

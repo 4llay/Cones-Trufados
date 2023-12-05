@@ -49,6 +49,7 @@ model Order {
   deliveryStatus  String?
   createDate      DateTime          @default(now())
   paymentIntentId String            @unique
+  paymentMethod   String?
   products        CartProductType[]
   address         Address?
 

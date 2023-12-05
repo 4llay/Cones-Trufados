@@ -1,7 +1,6 @@
 import { CartProductType } from "@/app/product/[productId]/ProductDetails";
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import { ToastAction } from "@/components/ui/toast";
 
 type CartContextType = {
     cartTotalQty: number;
@@ -29,12 +28,12 @@ export const CartContextProvider = (props: Props) => {
     const [cartProducts, setCartProducts] = useState<CartProductType[] | null>(null);
     const [cartTotalAmount, setCartTotalAmount] = useState(0);
 
-    const [paymentIntent, setPaymentIntent] = useState<string | null>(null)   
+    const [paymentIntent, setPaymentIntent] = useState<string | null>(null)
 
     useEffect(() => {
         const cartItems: any = localStorage.getItem('eShopCartItems')
         const cProducts: CartProductType[] | null = JSON.parse(cartItems)
-        const eShopPaymentIntent:any = localStorage.getItem('eShopPaymentIntent')
+        const eShopPaymentIntent: any = localStorage.getItem('eShopPaymentIntent')
         const paymentIntent: string | null = JSON.parse(eShopPaymentIntent);
 
         setCartProducts(cProducts)
@@ -44,13 +43,13 @@ export const CartContextProvider = (props: Props) => {
     useEffect(() => {
         const getTotals = () => {
 
-            if(cartProducts){
+            if (cartProducts) {
                 const { total, qty } = cartProducts?.reduce((acc, item) => {
                     const itemTotal = item.price * item.quantity;
-    
+
                     acc.total += itemTotal
                     acc.qty += item.quantity
-    
+
                     return acc;
                 }, { total: 0, qty: 0 })
                 setCartTotalQty(qty);
@@ -70,7 +69,7 @@ export const CartContextProvider = (props: Props) => {
                 updatedCart = [product]
             }
 
-            toast({title: "Sucesso!", description: "Seu produto foi adicionado ao carrinho"})
+            toast({ title: "Sucesso!", description: "Seu produto foi adicionado ao carrinho" })
             localStorage.setItem('eShopCartItems', JSON.stringify(updatedCart))
             return updatedCart;
         })
@@ -80,7 +79,7 @@ export const CartContextProvider = (props: Props) => {
         if (cartProducts) {
             const filteredProducts = cartProducts.filter((item) => { return item.id !== product.id })
             setCartProducts(filteredProducts)
-            toast({title: "Sucesso!", description: "Seu produto foi removido do carrinho"})
+            toast({ title: "Sucesso!", description: "Seu produto foi removido do carrinho" })
             localStorage.setItem('eShopCartItems', JSON.stringify(filteredProducts))
         }
     }, [cartProducts])
@@ -89,8 +88,8 @@ export const CartContextProvider = (props: Props) => {
         let updatedCart;
 
         if (product.quantity === 99) {
-            
-            return toast({title: "Ooooops!", description: "Maximo de produtos adicionados!", variant: "destructive",})
+
+            return toast({ title: "Ooooops!", description: "Maximo de produtos adicionados!", variant: "destructive", })
         }
 
         if (cartProducts) {
@@ -111,8 +110,8 @@ export const CartContextProvider = (props: Props) => {
         let updatedCart;
 
         if (product.quantity <= 1) {
-            
-            return toast({title: "Ooooops!", description: "Minimo de produtos no carrinho!", variant: "destructive",})
+
+            return toast({ title: "Ooooops!", description: "Minimo de produtos no carrinho!", variant: "destructive", })
         }
 
         if (cartProducts) {
@@ -151,7 +150,7 @@ export const CartContextProvider = (props: Props) => {
         handleCartQtyDecrease,
         handleClearCart,
         paymentIntent,
-        handleSetPaymentIntent
+        handleSetPaymentIntent,
     }
 
     return <CartContext.Provider value={value} {...props} />

@@ -3,6 +3,7 @@ import prisma from '../../../../libs/prismadb'
 import { NextResponse } from 'next/server'
 import { CartProductType } from '@/app/product/[productId]/ProductDetails'
 import { getCurrentUser } from '../../../../actions/getCurrentUser'
+import { PrismaClient } from '@prisma/client'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, { apiVersion: "2023-10-16" })
 
@@ -17,6 +18,8 @@ const calculateOrderAmount = (items: CartProductType[]) => {
 
     return price;
 };
+
+
 
 export async function POST(request: Request) {
     const currentUser = await getCurrentUser();
@@ -35,6 +38,7 @@ export async function POST(request: Request) {
         status: 'pending',
         deliveryStatus: 'pending',
         paymentIntentId: payment_intent_id,
+        paymentMethod: 'Card',
         products: items
     };
 
@@ -76,6 +80,8 @@ export async function POST(request: Request) {
             data: orderData
         });
 
+        
+        
         return NextResponse.error();
     };
 };
