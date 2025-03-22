@@ -63,7 +63,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                     <div className="flex items-center gap-2"></div>
                     <Horizontal />
                     <div className="text-justify text-[25px]">{product.description}</div>
-                    <div className={`${product.inStock ? 'text-green-500' : "text-rose-400"} underline-offset-2 underline`}>{product.inStock ? "Em estoque!" : "Fora de estoque!"}</div>
+                    <div className={`${product.inStock ? 'text-green-600' : "text-rose-700"} underline-offset-2 underline`}>{product.inStock ? "Produto disponível!" : "Fora de estoque!"}</div>
                     {isProductInCart ? <>
                         <Horizontal />
                         <p className="mb-2 flex items-center gap-1">

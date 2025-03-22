@@ -35,14 +35,12 @@ const Menu: React.FC<MenuProps> = ({currentUser}) => {
                     </>
                     : <></>
                 }
-                    <a href="/config"><DropdownMenuItem className="text-[2rem] hover:bg-[#ffffff70] cursor-pointer">Configurações</DropdownMenuItem></a>
+                    <a href="/config"><DropdownMenuItem className="text-[2rem] hover:bg-[#ffffff70] md:hidden cursor-pointer">Configurações</DropdownMenuItem></a>
 
-                    <DropdownMenuItem className="text-[2rem] hover:bg-[#ffffff70] cursor-pointer">Carrinho</DropdownMenuItem>
+                    <a href="https://instagram.com/lg_trufadasso" target="_blank"><DropdownMenuItem className="flex text-[2rem] md:hidden hover:bg-[#ffffff70]">Contato</DropdownMenuItem></a>
 
-                    <a href="https://instagram.com/lg_trufadasso"><DropdownMenuItem className="flex md:hidden text-[2rem] hover:bg-[#ffffff70]">Contato</DropdownMenuItem></a>
-
-                    <a href="/about"><DropdownMenuItem className="flex md:hidden text-[2rem] hover:bg-[#ffffff70]">Sobre</DropdownMenuItem></a>
-                    <DropdownMenuSeparator />
+                    <a href="/about"><DropdownMenuItem className="flex text-[2rem] md:hidden hover:bg-[#ffffff70]">Sobre</DropdownMenuItem></a>
+                    <DropdownMenuSeparator className="md:hidden"/>
                     <DropdownMenuItem className="text-[2rem] hover:bg-[#ffffff70]">
                         <AuthButton page="login" />
                     </DropdownMenuItem>

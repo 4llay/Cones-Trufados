@@ -46,10 +46,10 @@ const CartClient: React.FC<CartClientProps> = ({currentUser}) => {
                     })}
                 </div>
                 <div className="border-t-[1.5px] border-slate-200 py-4 flex justify-between gap-4">
-                    <div className="w-[90px]">
+                    <div>
                         <Button label="Limpar carrinho" onClick={() => { handleClearCart() }} small outline />
                     </div>
-                    <div className="text-sm flex flex-col gap-1 items-start">
+                    <div className="text-md flex flex-col gap-1 items-start">
                         <div className="flex justify-between text-base font-semibold w-full">
                             <span>Total</span>
                             <span>{formatPrice(cartTotalAmount)}</span>
