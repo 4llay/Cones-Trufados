@@ -69,8 +69,9 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                         <p className="mb-2 flex items-center gap-1">
                             <span>Produto adicionado ao carrinho!</span>
                         </p>
-                        <div className="max-w-[300px]">
+                        <div className="max-w-[600px] flex gap-8">
                             <Button label="Ver seu Carrinho" outline onClick={() => { router.push("/cart") }} />
+                            <Button label="Continuar comprando" outline onClick={() => { router.push("/") }} />
                         </div>
                     </> : <>
                         <Horizontal />
